@@ -53,7 +53,10 @@ scatterplot <- ggplot(extract,aes(x=extract[[combn((1:ncol(extract)),2)[1,i]]],
                            y=combn(colnames(extract),2)[2,i])+
                       geom_smooth(method=lm) +
                       geom_point(shape=16) + 
-                      ggtitle(paste('Correlation Coefficient=',r[i,2]))
+                      ## Prof G: Looks like the reference to r in the next line should be frame so
+                      ## Prof G: I commented out your line and fixed it.
+                      ## Prof G: ggtitle(paste('Correlation Coefficient=',r[i,2]))
+                      ggtitle(paste('Correlation Coefficient=',frame[i,2]))
 #using data 'extract', the x and y aes records the values of the ith pairs
 #labs() labels the x and y aes with the pair names
 #geom_smooth() adds a regression line as linear lm
