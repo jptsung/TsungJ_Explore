@@ -1,4 +1,13 @@
 #Write a function named explore that takes data frame, bin sizes,correlel
+
+##Prof G: No function header documentation to describe the parameters and what
+##Prof G: is returned? There are some errors in your plot, especially related to 
+##Prof G: how you calculated bin width. You also did not created the logical 
+##Prof G: column and append it to diamonds data. The following error stopped
+##Prof G: execution of explore.
+# Error in match.arg(method) : 
+#   'arg' should be one of “pearson”, “kendall”, “spearman” 
+
 explore <- function(dataframe,vector,correl){ 
   library(ggplot2) #loads ggplot2 package
   
@@ -139,7 +148,7 @@ library(ggplot2) #loads ggplot2 package
 
 data(diamonds) #loads diamonds data
 str(diamonds)
-explore(diamonds, c(5, 20, 50), .25)
+tsunglist <- explore(diamonds, c(5, 20, 50), .25)
 
 data(mtcars) #loads mtcars data
 str(mtcars)
